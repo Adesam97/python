@@ -3,7 +3,7 @@ num = random.randint(0, 9)
 secret_no = num
 no_of_trial = 1
 while no_of_trial <= 4:
-    print('Guess a lucky number')
+    print('Guess a lucky digit')
     while True:
         try:
             p = int(input('>'))
