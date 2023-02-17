@@ -22,7 +22,21 @@ jobs:
       
       - name: Use the version
         run: |
-          echo ${{ steps.version.outputs }}
+          echo ${{ steps.version.outputs.version }}
       - name: Use the previous version
         run: |
           echo ${{ steps.version.outputs.previous-version }}
+      - name: Bump version and push tag
+        id: tag_version
+        uses: mathieudutour/github-tag-action@v6.1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create a GitHub release
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ steps.tag_version.outputs.new_tag }}
+          name: Release ${{ steps.tag_version.outputs.new_tag }}
+          body: ${{ steps.tag_version.outputs.changelog }}
+      - name: Use the version
+        run: |
+          echo ${{ steps.tag_version.outputs.new_tag }}
