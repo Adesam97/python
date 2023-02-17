@@ -25,11 +25,11 @@ while no_of_trial <= 4:
             print('Incorrect guess')
             x = abs(p-secret_no)
             if 3 < x < 7:
-                print('Not very close')
+                print('Not very close mate')
             elif 0 < x < 4:
                 print('you are close mate')
             else:
-                print('you are far from the number')
+                print('you are far from the number mate')
             if no_of_trial < 4:
                 print(f'''
                 try again
