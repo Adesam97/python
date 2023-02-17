@@ -6,7 +6,7 @@ while no_of_trial <= 4:
     print('Guess a lucky digit')
     while True:
         try:
-            p = int(input('>'))
+            p = int(input('>>'))
         except ValueError:
             print("This is an unaccepted response, enter a valid integer value")
             continue
@@ -27,7 +27,7 @@ while no_of_trial <= 4:
             if 3 < x < 7:
                 print('Not very close')
             elif 0 < x < 4:
-                print('you are close')
+                print('you are close mate')
             else:
                 print('you are far from the number')
             if no_of_trial < 4:
