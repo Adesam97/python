@@ -22,7 +22,7 @@ while no_of_trial <= 4:
             ''')
             break
         else:
-            print('Incorrect')
+            print('Incorrect guess')
             x = abs(p-secret_no)
             if 3 < x < 7:
                 print('Not very close')
