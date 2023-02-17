@@ -2,7 +2,7 @@ import random
 num = random.randint(0, 9)
 secret_no = num
 no_of_trial = 1
-while no_of_trial <= 4:
+while no_of_trial <= 5:
     print('Guess a lucky digit')
     while True:
         try:
@@ -30,10 +30,10 @@ while no_of_trial <= 4:
                 print('you are close mate')
             else:
                 print('you are far from the number mate')
-            if no_of_trial < 4:
+            if no_of_trial < 5:
                 print(f'''
                 try again
-                no of trials left = { 4 - no_of_trial }
+                no of trials left = { 5 - no_of_trial }
                 ''')
             no_of_trial += 1
 else:
